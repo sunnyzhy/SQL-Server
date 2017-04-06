@@ -1,0 +1,8 @@
+问题描述：
+SQL Server 服务无法启动，查看系统日志：
+
+FCB::Open failed: 无法打开文件号 2 的文件 D:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\mastlog.ldf。操作系统错误: 5(拒绝访问。)。
+
+解决办法：
+
+从日志里面 "拒绝访问" 基本上可以判断出来是权限的问题，打开D:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER，右键MSSQL文件夹-->属性-->安全-->编辑-->添加-->高级-->立即查找-->添加 "计算机名\SQLServerMSSQLUser$计算机名$MSSQLSERVER"，确定。
