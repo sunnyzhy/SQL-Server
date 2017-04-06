@@ -1,0 +1,11 @@
+问题描述：
+
+安装sql server 2008，提示重新启动计算机失败。
+
+解决办法：
+
+1.点击"开始"-->"运行"，输入regedit，打开注册表
+
+2.找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager目录
+
+3.删除右侧的PendingFileRenameOperations
